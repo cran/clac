@@ -1,4 +1,3 @@
-#include "stdlib.h"
 
 /****************************************/
   void OrVector(int *n, int *x, int *y)
@@ -21,10 +20,10 @@ void subtree(int *n, int *merge, int *node, int *pknode, int *pktree)
   temp=*node;
   length=*n;  
   
-  letree=malloc((length+1)*sizeof(int));
-  ritree=malloc((length+1)*sizeof(int));
-  lenode=malloc(length*sizeof(int));
-  rinode=malloc(length*sizeof(int));
+  letree=(int *)malloc((length+1)*sizeof(int));
+  ritree=(int *)malloc((length+1)*sizeof(int));
+  lenode=(int *)malloc(length*sizeof(int));
+  rinode=(int *)malloc(length*sizeof(int));
   
   nn=length+1;
   i=temp-1;
@@ -62,11 +61,6 @@ void subtree(int *n, int *merge, int *node, int *pknode, int *pktree)
     }
 
   *(pknode+temp-1)=1;
-  
-  free(letree);
-  free(ritree);
-  free(lenode);
-  free(rinode);
 }
      
 /*************************************************/
@@ -106,9 +100,9 @@ void selectclust(int *n, int *merge, int *senode, int *seleaf)
   int *sn, *tleaf, *tnode;
   
   nn=(*n)+1;
-  sn=malloc((nn-1)*sizeof(int));
-  tleaf=malloc(nn*sizeof(int));
-  tnode=malloc(nn*sizeof(int));
+  sn=(int *)malloc((nn-1)*sizeof(int));
+  tleaf=(int *)malloc(nn*sizeof(int));
+  tnode=(int *)malloc(nn*sizeof(int));
   
   setzero(&nn, tleaf);
   setzero(n, tnode);
@@ -138,9 +132,6 @@ void selectclust(int *n, int *merge, int *senode, int *seleaf)
       setzero(n, tnode);
       maxnonzero(n, sn, &temp);
     }
-   free(sn);
-   free(tleaf);
-   free(tnode); 
 }
   
 
@@ -172,9 +163,9 @@ void selectleaf(int *M, int *clactree, int *N, int *ch, int *k, int *chset, int 
   mm=*M;
   nn=*N;
   
-  senodetemp=malloc(mm*sizeof(int));
-  seleaftemp=malloc(mm*sizeof(int));
-  mergetemp=malloc(mm*2*sizeof(int));
+  senodetemp=(int *)malloc(mm*sizeof(int));
+  seleaftemp=(int *)malloc(mm*sizeof(int));
+  mergetemp=(int *)malloc(mm*2*sizeof(int));
   
   curpoint=0;
   for(i=0; i<kk; i++)
@@ -238,10 +229,6 @@ void selectleaf(int *M, int *clactree, int *N, int *ch, int *k, int *chset, int 
       }
       }
   *cc=curpoint;
-  
-  free(senodetemp);
-  free(seleaftemp);
-  free(mergetemp);
 }              
                   
 /***********************************************************************

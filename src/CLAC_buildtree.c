@@ -1,5 +1,4 @@
 #include "stdio.h"
-#include "stdlib.h"
 
 double myabs(double x)
 {
@@ -126,8 +125,8 @@ void hclust_inside(int *n, double *x, double *result, int begin, int total, int 
   /* nn=length-1;*/
   nn=total;
 
-  val1=malloc(length*sizeof(int));
-  val2=malloc(length*sizeof(double)); 
+  val1=(int *)malloc(length*sizeof(int));
+  val2=(double *)malloc(length*sizeof(double)); 
 
   /* val1: -1 -- -n =length */
   for(i=0;i<(length-1);i++)
@@ -193,9 +192,6 @@ void hclust_inside(int *n, double *x, double *result, int begin, int total, int 
     {
     *(result+nn*2+i+begin)=(*(result+nn*2+i+begin))/(*(result+i+begin));
     }
-    
-    free(val1);
-    free(val2);
 }
 
 
@@ -221,7 +217,7 @@ void clacarray(int *N, double *array, int *ch, int *k, int *chset, int *nuc, int
   double  *curArm;
 
   nn=*N;  
-  curArm=malloc(nn*sizeof(int));
+  curArm=(double *)malloc(nn*sizeof(double));
   
   kk=*k;
   *M=0;
@@ -265,5 +261,4 @@ void clacarray(int *N, double *array, int *ch, int *k, int *chset, int *nuc, int
            *M=*M+count-1;
            }           
     }
-    free(curArm);
 }

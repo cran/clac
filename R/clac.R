@@ -696,7 +696,7 @@ text(start-100, level+3, "Percent of Samples")
 }
 
 #####################################################
-plot.allarray<-function(arrayraw, arrayregion, fdr, arrayname, chr, nucposi, centr)
+plot.allarray<-function(arrayraw, arrayregion, fdr, arrayname, chr=ch, nucposi=nucpos, centr=centro)
 {
     n<-length(chr)
     m<-ncol(arrayraw)
@@ -1013,7 +1013,7 @@ temp<-dim(NormalResult$CANCER.sm)
 CLAC.result<-matrix(0, nrow=temp[1]+2, ncol=temp[2])
 for(i in tumorarrayIndex)
   CLAC.result[,i]<-clac.onetumorarray.R(NormalResult,i)
-return(list(fdr=CLAC.result[1,], RegionMean=CLAC.result[-c(1,2), ], alpha=CLAC.result[2,], tumorarrayIndex=tumorarrayIndex))
+return(fdr=CLAC.result[1,], RegionMean=CLAC.result[-c(1,2), ], alpha=CLAC.result[2,], tumorarrayIndex=tumorarrayIndex)
 }
 
 ################################

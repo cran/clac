@@ -41,7 +41,7 @@ clac.PlotConsensus(inputdata, clac.result, SampleIDPick)
 }
 
 \references{
-P. Wang, Y. Kim, J. Pollack, B. Narasimhan and R. Tibshirani, ?A method for calling gains and losses in array CGH data?, Biostatistics (accepted for publication 4/5/2004), available at http://www-stat.stanford.edu/~wp57/CGH-Miner/
+P. Wang, Y. Kim, J. Pollack, B. Narasimhan and R. Tibshirani, ¡°A method for calling gains and losses in array CGH data¡±, Biostatistics (accepted for publication 4/5/2004), available at http://www-stat.stanford.edu/~wp57/CGH-Miner/
 }
 
 \keyword{internal}
