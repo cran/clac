@@ -1,0 +1,11 @@
+clac.PlotAllArray.R     A function to plot multiple arrays for CLAC
+                        result.
+clac.PlotConsensus.R    A function to make consensus plot for CLAC
+                        result.
+clac.PlotSingleArray.R
+                        A function to plot one single array for CLAC
+                        result.
+clac.preparenormal.R    A function to prepare normal reference in
+                        CLAC(Cluster Along Chromosome) Analysis
+clac.tumorarray.R       A function to do CLAC(Cluster Along
+                        Chromosome) Analysis

@@ -1,0 +1,13 @@
+useDynLib(clac)
+export(clac.from.Excel,
+clac.preparenormal.Excel,
+clac.onetumorarray.Excel,
+clac.finalsummary.Excel,
+clac.PlotOneArray,
+clac.PlotConsensus,
+clac.preparenormal.R,
+clac.tumorarray.R,
+clac.PlotSingleArray.R,
+clac.PlotConsensus.R,
+clac.PlotAllArray.R
+)
